@@ -1,4 +1,5 @@
 # z-util
+
 javascript util collection for enterprise applications
 
 # modules
@@ -21,3 +22,9 @@ javascript util collection for enterprise applications
     ├── trace.js
     └── url.js
 ```
+
+# License
+
+[MIT](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2013-present, zhangchi
