@@ -1,9 +1,9 @@
 export default {
-    isSupport: function() {
-        return ('localStorage' in window);
+    isSupport: function () {
+        return 'localStorage' in window;
     },
 
-    get: function(name) {
+    get: function (name) {
         if (!this.isSupport()) {
             return null;
         }
@@ -16,7 +16,7 @@ export default {
         }
     },
 
-    set: function(name, content) {
+    set: function (name, content) {
         if (!this.isSupport()) {
             return;
         }
@@ -28,7 +28,7 @@ export default {
         }
     },
 
-    remove: function(name) {
+    remove: function (name) {
         if (!this.isSupport()) {
             return;
         }
@@ -38,4 +38,4 @@ export default {
             console.log(e.message);
         }
     }
-}
+};

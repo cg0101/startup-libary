@@ -1,15 +1,15 @@
 export default {
     getScripts(urls, callback, async) {
         urls = urls || [];
-        if(async){
+        if (async) {
             let count = 0;
-            for(let i = 0; i < urls.length; i++){
+            for (let i = 0; i < urls.length; i++) {
                 this.getScript(urls[i], () => {
                     count++;
-                    if(count === urls.length){
+                    if (count === urls.length) {
                         callback && callback();
                     }
-                })
+                });
             }
             return;
         }
@@ -33,14 +33,14 @@ export default {
             util.tasksOfGetScript[url] = {
                 status: 'loading',
                 cbs: [callback]
-            }
+            };
         } else {
             if (util.tasksOfGetScript[url].status === 'loaded') {
                 callback && callback();
-                return
+                return;
             }
             if (util.tasksOfGetScript[url].status === 'loading') {
-                console.log(`${url}等待加载`)
+                console.log(`${url}等待加载`);
                 util.tasksOfGetScript[url].cbs.push(callback);
                 return;
             }
@@ -64,19 +64,19 @@ export default {
                 cbs[i] && cbs[i]();
                 util.tasksOfGetScript[url].cbs = [];
             }
-
         };
 
-        if (document.all) { //IE
+        if (document.all) {
+            //IE
             js.onreadystatechange = function () {
                 if (js.readyState == 'loaded' || js.readyState == 'complete') {
                     callbackFn();
                 }
-            }
+            };
         } else {
             js.onload = function () {
                 callbackFn();
-            }
+            };
         }
     },
     loadCss: function (path) {
@@ -90,4 +90,4 @@ export default {
         link.type = 'text/css';
         head.appendChild(link);
     }
-}
+};

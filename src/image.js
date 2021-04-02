@@ -16,7 +16,8 @@ export default {
             support = false;
             img = null;
         };
-        img.src = 'data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAsAAAABBxAREYiI/gcAAABWUDggGAAAADABAJ0BKgEAAQABABwlpAADcAD+/gbQAA==';
+        img.src =
+            'data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAsAAAABBxAREYiI/gcAAABWUDggGAAAADABAJ0BKgEAAQABABwlpAADcAD+/gbQAA==';
         return function () {
             if (complete) {
                 return support;
@@ -25,4 +26,4 @@ export default {
             }
         };
     })()
-}
+};

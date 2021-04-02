@@ -25,19 +25,32 @@ export default {
         try {
             var result = {};
             var anchor = document.createElement('a');
-            anchor.href = url || "";
-            _.each(['hash', 'host', 'hostname', 'href', 'origin', 'pathname', 'port', 'protocol', 'search'], function (i) {
-                result[i] = anchor[i]
-            });
+            anchor.href = url || '';
+            _.each(
+                [
+                    'hash',
+                    'host',
+                    'hostname',
+                    'href',
+                    'origin',
+                    'pathname',
+                    'port',
+                    'protocol',
+                    'search'
+                ],
+                function (i) {
+                    result[i] = anchor[i];
+                }
+            );
             if (!result.origin) {
-                result.origin = [result.protocol, '\/\/', result.hostname].join('');
+                result.origin = [result.protocol, '//', result.hostname].join('');
             }
             anchor = null;
             return result;
         } catch (e) {}
-        return {}
+        return {};
     },
     isAbsolutePath: function (path) {
         return /^data:|^(https?:)?\/\//i.test(path);
-    },
-}
+    }
+};

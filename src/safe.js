@@ -5,11 +5,14 @@ export default {
      * @returns {*}
      */
     escapeRegExp: function (str) {
-        return str.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+        return str.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
     },
     encodeHTML(str) {
-        return String(str).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g,
-            "&quot;").replace(
-            /'/g, "&#39;");
+        return String(str)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
     }
-}
+};

@@ -14,10 +14,10 @@ if (_android) {
     device.android = true;
     device.version = _android[2];
 
-}else if (_ios) {
+} else if (_ios) {
     device.ios = true;
     device.version = _ios[2].replace(/_/g, '.');
-}else{
+} else {
     device.pc = true;
 }
 

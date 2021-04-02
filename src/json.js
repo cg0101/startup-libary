@@ -15,7 +15,7 @@ export default {
             return {};
         }
     },
-    jsonParsePlus: function(str) {
+    jsonParsePlus: function (str) {
         let type = typeof str;
         if (type == 'object') {
             return str;
@@ -34,5 +34,5 @@ export default {
         } else {
             return {};
         }
-    },
-}
+    }
+};
