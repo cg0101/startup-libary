@@ -12,5 +12,8 @@ export default {
     },
     removeStr(source, index) {
         return source.slice(0, index) + source.slice(index + 1);
-    }
+    },
+   trim: function (str) {
+    return str.replace(/(^\s*)|(\s*$)/g, "");
+  }
 };
