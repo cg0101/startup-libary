@@ -8,9 +8,9 @@ export default {
         return url + (/\?/.test(url) ? '&' : '?') + tmp.join('&');
     },
     /**
-  * [parseQuery 解析地址]
-  * @param {[type:string] str [地址字符串]}
-  */
+     * [parseQuery 解析地址]
+     * @param {[type:string] str [地址字符串]}
+     */
     parseQuery(str) {
         var arr = str.replace('?', '').split('&'),
             obj = {};
@@ -19,5 +19,25 @@ export default {
             obj[tmp[0]] = tmp[1];
         }
         return obj;
+    },
+    // 转换url
+    parseUrl: function (url) {
+        try {
+            var result = {};
+            var anchor = document.createElement('a');
+            anchor.href = url || "";
+            _.each(['hash', 'host', 'hostname', 'href', 'origin', 'pathname', 'port', 'protocol', 'search'], function (i) {
+                result[i] = anchor[i]
+            });
+            if (!result.origin) {
+                result.origin = [result.protocol, '\/\/', result.hostname].join('');
+            }
+            anchor = null;
+            return result;
+        } catch (e) {}
+        return {}
+    },
+    isAbsolutePath: function (path) {
+        return /^data:|^(https?:)?\/\//i.test(path);
     },
 }
