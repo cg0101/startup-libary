@@ -1,0 +1,13 @@
+{
+    "version": "3.2.4",
+    "npmClient": "yarn",
+    "useWorkspaces": true,
+    "command": {
+        "version": {
+            "message": "chore(release): 发布 %s",
+            "allowBranch": [
+                "release"
+            ]
+        }
+    }
+}

@@ -1,0 +1,16 @@
+/// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/// Copyright (c) zhangchi. All rights reserved.
+/// https://github.com/cg0101/startup-libary/blob/master/LICENSE
+/// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "importsNotUsedAsValues": "error",
+        "module": "es2015",
+        "moduleResolution": "node",
+        "strict": true,
+        "stripInternal": true,
+        "target": "es2015"
+    }
+}

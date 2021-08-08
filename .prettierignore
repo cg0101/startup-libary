@@ -1,7 +1,0 @@
-**/*.min.js
-**/*.production.js
-**/*.min.css
-**/*.production.css
-package.json
-npm-shrinkwrap.json
-package-lock.json

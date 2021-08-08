@@ -1,0 +1,10 @@
+{
+    "extends": "../../../tsconfig.project.json",
+    "compilerOptions": {
+        "composite": true,
+        "outDir": "../dist/"
+    },
+    "references": [
+        { "path": "../../asserts/src/tsconfig.json" }
+    ]
+}
