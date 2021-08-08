@@ -52,9 +52,4 @@ yarn eslint
 # 发布
 yarn release
 
-# 发布流程
-# - 1) 请先依次运行 `yarn build`, `yarn test`, `yarn eslint` 确保项目编译没有出现错误。
-# - 2) 发布之前使用 `npm whoami` 确保你已经通过 `npm login` 登录到公司的 npm registry，否则发布会失败。
-# - 3) 确保当前工作区没有未提交的文件。
-# - 4) 运行 `yarn release` 触发发布流程。
 ```
