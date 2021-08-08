@@ -4,6 +4,7 @@ starup Monorepo
 ## 项目列表
 Name | Description
 -----|------------
+[@starup/util](./packages/util/README.md) | util 常用代码片段
 [@starup/asserts](./packages/asserts/README.md) | Asserts 断言工具
 [@starup/events](./packages/events/README.md) | EventTarget 同步事件分发系统
 
